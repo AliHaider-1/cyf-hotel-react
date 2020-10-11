@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Search from "./Search.js";
 import SearchResults from "./SearchResults.js";
+
 const Bookings = () => {
   let [getResponse, setResponse] = useState("");
   const [bookings, setBookings] = useState([]);
@@ -17,6 +18,7 @@ const Bookings = () => {
       .then(data => setBookings(data))
       .catch(err => console.error(err));
   }, [getResponse]);
+
 
   const search = searchVal => {
     console.info("TO DO!", searchVal);
